@@ -24,10 +24,15 @@ class Hpg
   end
 
   # do something like:
-  # figure out how wide each column can be
+  # figure out how wide each column can be (allow for column seps)
   # read the file and wrap the lines per the width
-  # find the number of lines
-  # break up the file into number-of-lines blocks (fill left most blocks 
+  # find the number of lines in result
+  # break up the file into number-of-lines blocks (fill left most blocks first)
+  # - IE if not even split left should be more full
+  # - each block is an array
+  # space pad each line
+  # fill each line of output array from each line of block arrays
+  #
 
 end
 
