@@ -1,9 +1,9 @@
 require 'optimist'
 
 class Hpg
-  attr_reader :rows, :cols, :opts
+  attr_reader :tlines, :twidth, :opts
   def initialize
-    @rows, @cols = winsize
+    @tlines, @twidth = winsize
     @opts = parse_opts
   end
 
@@ -20,7 +20,7 @@ class Hpg
   end
 
   def column_width
-    @cols / @opts[:columns]
+    @twidth / @opts[:columns]
   end
 
   # do something like:
@@ -37,7 +37,7 @@ class Hpg
 end
 
 p = Hpg.new
-# pp p.rows, p.cols
+# pp p.tlines, p.twidth
 pp p.column_width
 #pp winsize
 #opts = parse_opts
